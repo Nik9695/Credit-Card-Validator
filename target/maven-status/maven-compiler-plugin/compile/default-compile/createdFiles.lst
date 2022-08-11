@@ -1,4 +1,3 @@
-com\creditcardvalidator\model\CreditCardModel.class
 com\creditcardvalidator\service\CreditCardService.class
+com\creditcardvalidator\model\CreditCardModel.class
 com\creditcardvalidator\controllers\CreditCardController.class
-com\creditcardvalidator\CreditCardValidatorApplication.class

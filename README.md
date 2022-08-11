@@ -16,7 +16,7 @@
   <p align="center">
     Project description
     <br/>
-    <a href="https://nik9695.github.io/Bank-statement-analyzer/"><strong>Explore the docs »</strong></a>
+    <a href="https://nik9695.github.io/Credit-Card-Validator/"><strong>Explore the docs »</strong></a>
   </p>
 </div>
 
