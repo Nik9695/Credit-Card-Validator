@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: Ульяна
+Build-Jdk: Oracle OpenJDK version 1.8.0_321
+Implementation-Title: Credit-Card-Validator
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.creditcardvalidator
+Main-Class: ${start-class}
+
