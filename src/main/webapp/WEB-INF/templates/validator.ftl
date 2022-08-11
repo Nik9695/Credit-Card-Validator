@@ -10,7 +10,7 @@
     <div class="container">
         <div class="card">
             <div class="top">
-                <h3>Add new card</h3>
+                <h3>Validate credit card</h3>
                 <hr>
             </div>
             <div class="card-details"> <input name="cardNumber" type="text" placeholder="0000 0000 0000 0000" data-slots="0" data-accept="\d" size="19">
