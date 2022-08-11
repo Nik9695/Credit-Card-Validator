@@ -9,9 +9,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * 
+ * Class responds for credit card validation process.
  */
 public class CreditCardService {
+
 
     private boolean creditCardNumberIsValid;
     private boolean cvvCodeIsValid;
@@ -20,9 +21,21 @@ public class CreditCardService {
 
 
     private CreditCardModel creditCardModel;
+
+    /**
+     * Class constructor
+     * @param creditCardModel instance of {@link CreditCardModel}
+     */
     public CreditCardService(CreditCardModel creditCardModel) {
         this.creditCardModel = creditCardModel;
     }
+
+    /**
+     * Method used for checking validity of credit card number (16 or 19 digits). If credit card number is valid,
+     * method returns card number as {@link String} and sets {@link CreditCardService#creditCardNumberIsValid} to 'true',
+     * otherwise it returns message about failure and sets {@link CreditCardService#creditCardNumberIsValid} to 'false'.
+     * @return {@link String} card number or failure message
+     */
     public String validateCardNumber() {
 
         String cardNumber = creditCardModel.getCardNumber();
@@ -38,6 +51,12 @@ public class CreditCardService {
         }
     }
 
+    /**
+     * Method used for checking validity of CVV code (3 or 4 digits). If CVV code is valid,
+     * method returns CVV code as {@link String} and sets {@link CreditCardService#cvvCodeIsValid} to 'true',
+     * otherwise it returns message about failure and sets {@link CreditCardService#cvvCodeIsValid} to 'false'.
+     * @return {@link String} CVV code or failure message
+     */
     public String validateCvvCode() {
 
         String cvvCode = creditCardModel.getCvvCode();
@@ -65,6 +84,13 @@ public class CreditCardService {
             return "CVV code is invalid";
         }
     }
+
+    /**
+     * Method used for checking validity of credit card number according ot Lunh Algorithm. If card number is valid,
+     * method returns card number as {@link String} and sets {@link CreditCardService#validAccordingLunhAlgorithm} to 'true',
+     * otherwise returns failure message and sets {@link CreditCardService#validAccordingLunhAlgorithm} to 'false'.
+     * @return {@link String} card number or failure message
+     */
     public String validateWithLunhAlgorithm() {
         String cardNumber = creditCardModel.getCardNumber();
         int[] ints = new int[cardNumber.length()];
@@ -91,6 +117,13 @@ public class CreditCardService {
             return "Validation according Lunh algorithm is failed.";
         }
     }
+
+    /**
+     * Method used for checking validity of credit card's expiry date (3 or 4 digits). If expiry date is valid,
+     * method returns expiry date as {@link String} and sets {@link CreditCardService#expiryDateIsValid} to 'true',
+     * otherwise it returns message about failure and sets {@link CreditCardService#expiryDateIsValid} to 'false'.
+     * @return {@link String} expiry date or failure message
+     */
     public String validateExpiryDate() {
         String cardExpiryDate = creditCardModel.getExpiryDate();
 
@@ -105,6 +138,11 @@ public class CreditCardService {
         return cardExpiryDate;
     }
 
+    /**
+     * Method used to encapsulate all validation methods
+     * @param creditCard instance of {@link CreditCardModel}
+     * @return 'true' if all methods passed successfully, if at least one failed returns 'false'.
+     */
     public boolean validateCard(CreditCardModel creditCard) {
         validateWithLunhAlgorithm();
         validateCardNumber();
