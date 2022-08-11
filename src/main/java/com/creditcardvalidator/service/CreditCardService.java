@@ -2,8 +2,6 @@ package com.creditcardvalidator.service;
 
 
 import com.creditcardvalidator.model.CreditCardModel;
-import org.springframework.stereotype.Service;
-
 import java.time.YearMonth;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
