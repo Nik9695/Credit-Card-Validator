@@ -75,7 +75,8 @@ Credit card validation carried out in several steps:
 * [Java 8](https://www.oracle.com/java/technologies/java8.html)
 * [Apache Maven](https://maven.apache.org/)
 * [Spring MVC]()
-* [Apache Tomcat]()
+* [Apache Tomcat](https://tomcat.apache.org/)
+* [Freemarker](https://freemarker.apache.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
