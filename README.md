@@ -109,29 +109,29 @@ Credit card validation carried out in several steps:
 
 - press "Fix" button to mark artifacts for deployment
 
-![img.png](src/images/idea_config_step3_4.png)
+![img.png](src/images/idea_config_step3_4.PNG)
 
 - choose artifact "Credit-Card-Validator:war exploded"
 
-![img.png](src/images/idea_config_step3_5.png)
+![img.png](src/images/idea_config_step3_5.PNG)
 
 - Make sure that "Application context" field is empty. Configuration is finished, press "OK" to apply all changes
 
-![img.png](src/images/idea_config_step3_note.png)
+![img.png](src/images/idea_config_step3_note.PNG)
 
 ## Usage
 
 Now it is possible to run the project :
 
-![img.png](src/images/idea_config_step4_1.png)
+![img.png](src/images/idea_config_step4_1.PNG)
 
 After the launch you will get deployed project:
 
-![img.png](src/images/idea_config_step4_2.png)
+![img.png](src/images/idea_config_step4_2.PNG)
 
 Also application will be opend in the browser:
 
-![img.png](src/images/idea_config_step4_3.png)
+![img.png](src/images/idea_config_step4_3.PNG)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

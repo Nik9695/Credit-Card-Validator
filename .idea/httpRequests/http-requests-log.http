@@ -1,0 +1,12 @@
+GET http://localhost:8080/users
+
+<> 2022-08-10T124422.404.html
+
+###
+
+POST http://localhost:8080/users/new
+
+<> 2022-08-10T124407.404.html
+
+###
+
