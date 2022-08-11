@@ -11,7 +11,7 @@
 <div align="center">
     <img src="src/images/logo.png" alt="Logo" width="650" height="150">
 
-<h2 align="center">Bank statement analyzer</h2>
+<h2 align="center">Credit card validator</h2>
 
   <p align="center">
     Project description
@@ -32,9 +32,8 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#installation">Installation</a></li>
+    <li><a href="#Application launch">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#implemented-and-planned-functions">Implemented and planned functions</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -44,32 +43,28 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This project is aimed at developmental independent software designed to analyze banking activity.
 
-Banking Analyzer is not a web resource, which guarantees the protection of each user's personal information, since the results of the program's work are stored only on the local machine.
+Project is representing validation system for credit cards.
 
-There are two ways to work with Banking Analyzer:
+It is based on simple algorithms for checking :
 
-a) option 'A':
+- Card number (PAN)
+- CVV code 
+- Expiry date
 
-	1) the file under investigation is placed in the specified directory
+Application consists of web page with forms for filling and backend API which responsible for validation algorithms.
 
-	2) the program is launched using the Maven plugin
+Credit card validation carried out in several steps:
 
-	3) the result is exported to files of 3 different formats - JSON, XML, HTML
+- it is required to fill all fields on the web page
 
-b) option 'B':
+  ![img.png](src/images/filled_validator.png)
 
-	1) the program is launched using the Maven plugin, specifying the directory where the file under investigation is located
+<i>*Note: [Expiry date]() field need to be filled according to example mm/yyyy</i>
 
-	2) the result is exported to files of 3 different formats - JSON, XML, HTML
-
-Regardless of the option you choose 'A' or 'B', the results of the program are exported to the folder 'resources'.
-
-In order to get an exact description of how the classes work, please refer to the documentation.
-<div align="center">
-    <img src="src/images/carbon.png" alt="Logo" width="814" height="658">
-</div>
+- in accordance with the information provided, on backend side instance of "CreditCardModel" class is creating
+- all information in the "Credit card model" will be checked by service layer with "CreditCardService" class
+- according to the results of all checks you will be forward to "passed validation page" or "failed validation page".
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -93,8 +88,8 @@ In order to get an exact description of how the classes work, please refer to th
 2.Build the project with [Maven]() :
 
    ```shell
-  ...\Bank-statement-analyzer mvn clean
-  ...\Bank-statement-analyzer mvn package
+  ...\Credit-Card-Validator mvn clean
+  ...\Credit-Card-Validator mvn package
    ```
 
 3.Configuring Intellij IDEA for deploy
@@ -120,53 +115,26 @@ In order to get an exact description of how the classes work, please refer to th
 
 ![img.png](src/images/idea_config_step3_5.png)
 
-- configuration is finished, press "OK" to apply all changes
+- Make sure that "Application context" field is empty. Configuration is finished, press "OK" to apply all changes
 
-![img.png](src/images/idea_config_step3_6.png)
+![img.png](src/images/idea_config_step3_note.png)
 
-<!-- USAGE EXAMPLES -->
 ## Usage
 
-Project is aimed on parsing 'CSV' or 'JSON' files containing information about bank transactions.
+Now it is possible to run the project :
 
-If you want to analyze your bank account activity you can use "Bank statement analyzer" to obtain information in three possible formats:
+![img.png](src/images/idea_config_step4_1.png)
 
-* HTML
-* JSON
-* XML
+After the launch you will get deployed project:
 
-Application using domain object to present you a result of all bank activities presented in your input file ('SummaryStatistics').
+![img.png](src/images/idea_config_step4_2.png)
 
+Also application will be opend in the browser:
 
-You can be sure that all your personal date will not be stored and shared because all manipulations are taking place on your local machine.
-
-
-_For more examples, please refer to the [Documentation](https://nik9695.github.io/Bank-statement-analyzer/)_
+![img.png](src/images/idea_config_step4_3.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- Functions -->
-## Implemented and planned functions
-- [ ] <b><u>Parsing of input file</u></b>
-    - [x] Parsing CSV file
-    - [ ] Parsing JSON file
-    - [ ] Parsing XML file
-- [ ] <b><u>Processing of data</u></b>
-    - [x] Calculating maximum and minimum transaction
-    - [x] Calculating average of all transactions
-    - [ ] Calculating transactions in specified month
-    - [ ] Drawing histogram according to analyzed results
-- [x] <b><u>Export</u></b>
-    - [x] Export to JSON
-    - [x] Export to HTML
-    - [x] Export to XML
-
-
-See the [open issues](https://github.com/Nik9695/Bank-statement-analyzer/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -192,7 +160,7 @@ Don't forget to give the project a star! Thanks again!
 
 Nikita Agureev - nagureev@gmail.com
 
-Project Link: [https://github.com/Nik9695/Bank-statement-analyzer](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/Nik9695/Credit-Card-Validator](https://github.com/github_username/repo_name)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -202,14 +170,14 @@ Project Link: [https://github.com/Nik9695/Bank-statement-analyzer](https://githu
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Nik9695/Bank-statement-analyzer.svg?style=for-the-badge
-[contributors-url]: https://github.com/Nik9695/Bank-statement-analyzer/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/Nik9695/Credit-Card-Validator.svg?style=for-the-badge
+[contributors-url]: https://github.com/Nik9695/Credit-Card-Validator/graphs/contributors
 
-[stars-shield]: https://img.shields.io/github/stars/Nik9695/Bank-statement-analyzer.svg?style=for-the-badge
-[stars-url]: https://github.com/Nik9695/Bank-statement-analyzer/stargazers
+[stars-shield]: https://img.shields.io/github/stars/Nik9695/Credit-Card-Validator.svg?style=for-the-badge
+[stars-url]: https://github.com/Nik9695/Credit-Card-Validator/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/Nik9695/Bank-statement-analyzer.svg?style=for-the-badge
-[issues-url]: https://github.com/Nik9695/Bank-statement-analyzer/issues
+[issues-shield]: https://img.shields.io/github/issues/Nik9695/Credit-Card-Validator.svg?style=for-the-badge
+[issues-url]: https://github.com/Nik9695/Credit-Card-Validator/issues
 
 
-# Bank-statement-analyzer
+# Credit card validator
